@@ -1,0 +1,2 @@
+2014-06-08 19:48:13.684 [Worker-0] INFO    com.objectaid.uml.model.manage.DiagramManager getFactories: com.objectaid.uml.diagramFactories[ucls]: com.objectaid.uml.cls.model.ClassDiagramFactory@38c2a17a
+2014-06-08 21:56:46.761 [ModalContext] INFO    com.objectaid.uml.model.manage.LanguageElementManager getLanguageElementFactories: com.objectaid.uml.languageElementFactories: com.objectaid.uml.java.JavaElementFactory

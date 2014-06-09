@@ -1,0 +1,7 @@
+package ninja.androiddev.customfontwidgets.views;
+
+import android.widget.EditText;
+
+public class CustomFontEditText extends EditText {
+
+}

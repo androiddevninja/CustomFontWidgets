@@ -1,0 +1,19 @@
+package ninja.androiddev.customfontwidgets.utils;
+
+import java.util.Hashtable;
+
+import android.content.Context;
+import android.graphics.Typeface;
+import android.util.AttributeSet;
+import android.widget.TextView;
+
+public class CustomFontUtils {
+
+	private static final Hashtable<String, Typeface> fonts = new Hashtable<String, Typeface>();
+	
+	public static void setTypeFace(Context context, AttributeSet attrs, TextView view)
+	{
+		
+	}
+	
+}

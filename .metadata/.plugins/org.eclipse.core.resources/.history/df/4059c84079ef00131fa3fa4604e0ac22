@@ -1,0 +1,5 @@
+package ninja.androiddev.utils;
+
+public class CustomFontUtils {
+
+}

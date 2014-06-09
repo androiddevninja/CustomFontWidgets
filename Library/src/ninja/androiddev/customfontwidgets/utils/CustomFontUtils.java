@@ -1,0 +1,60 @@
+package ninja.androiddev.customfontwidgets.utils;
+
+import java.util.Hashtable;
+
+import ninja.androiddev.customfontwidgets.R;
+
+import android.content.Context;
+import android.content.res.TypedArray;
+import android.graphics.Typeface;
+import android.util.AttributeSet;
+import android.util.Log;
+import android.widget.TextView;
+
+public class CustomFontUtils {
+
+	/**
+	 * This is the cache where the fonts are saved in case they need to be used again.
+	 */
+	private static final Hashtable<String, Typeface> fonts = new Hashtable<String, Typeface>();
+	
+	
+	/**
+	 * This method checks if the typeface attribute was applied to the view and then applies the 
+	 * appropriate font to the view
+	 * 
+	 * @param context
+	 * @param attrs
+	 * @param view
+	 */
+	public static void setTypeFace(Context context, AttributeSet attrs, TextView view)
+	{
+		TypedArray valuesArray = context.obtainStyledAttributes(attrs, R.styleable.CustomFontWidget);
+		String customTypeFaceName = valuesArray.getString(R.styleable.CustomFontWidget_typeface);
+		
+		if(customTypeFaceName != null && customTypeFaceName.length()>0)
+		{
+			if(!fonts.containsKey(customTypeFaceName))
+			{
+				Typeface customTypeface;
+				try
+				{
+					customTypeface = Typeface.createFromAsset(context.getAssets(), customTypeFaceName);
+					view.setTypeface(customTypeface);
+					fonts.put(customTypeFaceName, customTypeface);
+					
+				}catch(Exception e)
+				{
+					Log.v("CustomFontWidgets", e.getLocalizedMessage());
+				}
+			}
+			else
+			{
+				view.setTypeface(fonts.get(customTypeFaceName));
+			}
+		}
+		
+		valuesArray.recycle();
+	}
+	
+}

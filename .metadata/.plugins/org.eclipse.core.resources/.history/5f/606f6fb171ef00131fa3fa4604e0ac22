@@ -1,0 +1,7 @@
+package ninja.androiddev.views;
+
+import android.widget.TextView;
+
+public class CustomFontTextView extends TextView {
+
+}

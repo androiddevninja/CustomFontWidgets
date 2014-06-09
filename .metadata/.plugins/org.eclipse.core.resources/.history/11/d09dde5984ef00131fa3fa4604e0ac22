@@ -1,0 +1,7 @@
+package ninja.androiddev.customfontwidgets.views;
+
+import android.widget.Button;
+
+public class CustomFontButton extends Button {
+
+}

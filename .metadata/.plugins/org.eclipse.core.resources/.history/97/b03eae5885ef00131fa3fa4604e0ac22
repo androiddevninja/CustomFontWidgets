@@ -1,0 +1,7 @@
+package ninja.androiddev.customfontwidgets.views;
+
+import android.widget.CheckedTextView;
+
+public class CustomFontCheckedTextView extends CheckedTextView {
+
+}

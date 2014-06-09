@@ -1,0 +1,4 @@
+INDEX VERSION 1.126+/Users/MehtaFamilyMac/Development/Android Ninja/blog/CustomFontWidgets/.metadata/.plugins/org.eclipse.jdt.core
+1270315800.index
+1594611305.index
+3055931853.index
